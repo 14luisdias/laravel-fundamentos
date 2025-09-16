@@ -16,5 +16,22 @@ class ClienteController extends Controller
         ]);
 
     }
-    //
+    public function create(){
+
+        return view('clientes.create');
+
+    }
+
+    public function store(Request $request){
+
+        $novoCliente = new Client;
+        $novoCliente->nome = $request->nome;
+        $novoCliente->endereco = $request->endereco;
+        $novoCliente->descricao = $request->descricao;
+
+        $novoCliente->save();
+        
+        return redirect('/clientes');
+
+    }
 }

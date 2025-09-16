@@ -13,9 +13,7 @@
             <a href="" class="text-2xl font-semibold">TreinaWeb</a>
 
             <ul class="font-medium flex">
-                <li class="px-4">Cadastro de Clientes</li>
-                <li class="px-4">Cadastro de Clientes</li>
-                <li class="px-4">Cadastro de Clientes</li>
+                <li class="px-4"> <a href="/clientes/create" class="font-semibold">Cadastro de Clientes</a></li>
             </ul>
         </div>
     </nav>
