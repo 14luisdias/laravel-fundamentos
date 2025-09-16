@@ -10,7 +10,7 @@
 <body>
     <nav class="bg-gray-300 p-4">
         <div class="container mx-auto flex items-center justify-between ">
-            <a href="" class="text-2xl font-semibold">TreinaWeb</a>
+            <a href="/" class="text-2xl font-semibold">TreinaWeb</a>
 
             <ul class="font-medium flex">
                 <li class="px-4"> <a href="/clientes" class="font-semibold">Lista de Clientes</a></li>

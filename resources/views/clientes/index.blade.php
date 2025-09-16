@@ -10,10 +10,10 @@
 <body>
     <nav class="bg-gray-300 p-4">
         <div class="container mx-auto flex items-center justify-between ">
-            <a href="" class="text-2xl font-semibold">TreinaWeb</a>
+            <a href="/" class="text-2xl font-semibold">TreinaWeb</a>
 
             <ul class="font-medium flex">
-                <li class="px-4"> <a href="/clientes/create" class="font-semibold">Cadastro de Clientes</a></li>
+                <li class="px-4"> <a href="/clientes" class="font-semibold">Lista de Clientes</a></li>
             </ul>
         </div>
     </nav>
@@ -21,7 +21,9 @@
         <h1 class="text-4xl font-bold text-center my-4">
             Lista de Clientes
         </h1>
-
+        <div class="flex justify-end my-3">
+            <a href="/clientes/create" class="bg-blue-500 border rounded-md p-1 px-3 text-white">Novo Cliente</a>
+        </div>
 
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
