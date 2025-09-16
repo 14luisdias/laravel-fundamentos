@@ -24,14 +24,32 @@ class ClienteController extends Controller
 
     public function store(Request $request){
 
-        $novoCliente = new Client;
-        $novoCliente->nome = $request->nome;
-        $novoCliente->endereco = $request->endereco;
-        $novoCliente->descricao = $request->descricao;
+        
 
-        $novoCliente->save();
+        if (!isset($request->id)) {
+            $cliente = new Client;
+        }else{
+            $cliente = Client::find($request->id);
+        }
+        
+        $cliente->nome = $request->nome;
+        $cliente->endereco = $request->endereco;
+        $cliente->descricao = $request->descricao;
+        
+        $cliente->save();
         
         return redirect('/clientes');
 
+    }
+
+    public function update(int $id){
+
+        $clientes = Client::find($id);
+        
+
+        return view('clientes.update',[
+            'clientes' => $clientes
+        ]);
+        
     }
 }
