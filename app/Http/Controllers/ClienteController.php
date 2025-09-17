@@ -12,7 +12,7 @@ class ClienteController extends Controller
      */
     public function index(){
 
-        $clientes = Client::get();
+        $clientes = Client::orderBy('nome')->get();
 
         return view('clientes.index',[
             'clientes' => $clientes
@@ -34,8 +34,6 @@ class ClienteController extends Controller
      * salva no banco de dados os dados que vem do formulario de cadastro ou atualização de clientes
      */
     public function store(Request $request){
-
-
 
         $request->validate([
             'nome'=> ['required', 'min:3', 'max:100'],
@@ -74,4 +72,17 @@ class ClienteController extends Controller
         ]);
         
     }
+
+    /**
+     * direciona para a view que vai atualizar o registro do cliente
+     * passando um id
+     */
+    public function delete(int $id){
+
+        $clientes = Client::find($id);
+        $clientes->delete();
+
+         return redirect('/clientes');
+    }
+    
 }
