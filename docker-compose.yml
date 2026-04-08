@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: laravel-fundamentos-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    ports:
+      - "9030:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      COMPOSER_ALLOW_SUPERUSER: "1"
+      COMPOSER_CACHE_DIR: /tmp/composer-cache
+      APP_ENV: local
+      APP_DEBUG: "true"
+    volumes:
+      - ./:/var/www/html
+      - vendor_data:/var/www/html/vendor
+      - node_modules_data:/var/www/html/node_modules
+      - composer_cache:/tmp/composer-cache
+    command: ["/usr/local/bin/start-laravel"]
+
+volumes:
+  vendor_data:
+  node_modules_data:
+  composer_cache:

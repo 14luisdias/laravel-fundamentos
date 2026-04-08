@@ -45,19 +45,19 @@
         <form method="post" action="/clientes" class="max-w-6xl mx-auto">
             @csrf
             <div class="mb-5">
-                <label for=nome class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome do Cliente</label>
+                <label for=nome class="block mb-2 text-sm font-medium text-gray-900 dark:text-success">Nome do Cliente</label>
                 <input type="text" id="nome" name="nome"
                     class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" 
                     required />
             </div>
             <div class="mb-5">
-                <label for="endereco" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Endereço do Cliente</label>
+                <label for="endereco" class="block mb-2 text-sm font-medium text-gray-900 dark:text-success">Endereço do Cliente</label>
                 <input type="text" id="endereco" name="endereco"
                     class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" 
                     required />
             </div>
             <div class="mb-5">
-                <label for="descricao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descrição do Cliente</label>
+                <label for="descricao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-success">Descrição do Cliente</label>
                 <input type="text" id="descricao" name="descricao"
                     class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" 
                     required />
